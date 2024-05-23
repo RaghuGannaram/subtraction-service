@@ -1,8 +1,22 @@
+#################################################################local instance
 ###  health check
 GET http://localhost:5002/health-check HTTP/1.1
 
 ### subtraction
 POST http://localhost:5002/api/v1/subtraction HTTP/1.1
+Content-Type: application/json
+
+{
+    "number1": "10",
+    "number2": 5
+}
+
+################################################################ container instance
+###  health check
+GET http://localhost:9002/health-check HTTP/1.1
+
+### subtraction
+POST http://localhost:9002/api/v1/subtraction HTTP/1.1
 Content-Type: application/json
 
 {
