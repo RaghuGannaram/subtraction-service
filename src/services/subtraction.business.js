@@ -8,7 +8,7 @@ const subtraction = catchAsyncBusinessError(async (number1, number2) => {
         throw new BusinessError(BusinessErrors.VALIDATION_FAILURE, "number1 and number2 must be numbers");
     }
 
-    return number1 - number2;
+    return Number(number1) - Number(number2);
 });
 
 export default {
