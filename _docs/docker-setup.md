@@ -11,7 +11,7 @@ docker container run \
 > --publish 9002:9002 \
 > --network calculation-microservices-network \
 > --env LOG_LEVEL=debug \
-> --mount type=bind,source="$(pwd)/Docker/logs",target=/app/logs \
+> --mount type=bind,source="$(pwd)/_docker/logs",target=/app/logs \
 > raghugannaram/subtraction-service:1.0.0
 
 ```
